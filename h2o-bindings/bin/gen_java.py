@@ -526,6 +526,7 @@ def generate_main_class(endpoints):
               .registerTypeAdapter(ModelOutputSchemaV3.class, new ModelOutputDeserializer())
               .registerTypeAdapter(ModelParametersSchemaV3.class, new ModelParametersDeserializer())
               .serializeSpecialFloatingPointValues()
+  	      .setLenient()
               .create();
 
             OkHttpClient client = new OkHttpClient.Builder()
