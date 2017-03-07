@@ -24,6 +24,7 @@ public class H2oRestGsonHelper {
             // .registerTypeAdapterFactory(new ModelV3TypeAdapter())
             .registerTypeAdapter(KeyV3.class, new KeySerializer())
             .registerTypeAdapter(FrameV3.ColSpecifierV3.class, new ColSerializer())
+            .serializeSpecialFloatingPointValues()
             // .registerTypeAdapter(ModelBuilderSchema.class, new ModelDeserializer())
             // .registerTypeAdapter(ModelSchemaBaseV3.class, new ModelSchemaDeserializer())
             .create();
